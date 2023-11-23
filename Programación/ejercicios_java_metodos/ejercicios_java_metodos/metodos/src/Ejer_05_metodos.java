@@ -2,27 +2,31 @@ import java.util.Scanner;
 public class Ejer_05_metodos {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int num1=sc.nextInt();
-        int num2=sc.nextInt();
-        int resultado =modulo(num1, num2);
-        if (resultado==0) {
-            System.out.println("eran iguales");
-        }else{
-            System.out.println(resultado);
-        }
+        System.out.println("Tenemos un cilindro, quieres hacer su area o su volumen");
+        String eleccion = sc.nextLine();
+        char letra = eleccion.charAt(0);
+        int altura=10;
+        int radio=5;
+        do
+            if(letra=='a' || letra == 'A'){
+                double areacil=area(radio, altura);
+                System.out.println(areacil);
+            }else if(letra=='v' || letra == 'V'){
+                double volcil=volumen(radio, altura);
+                System.out.println(volcil);
+            }
+        while (letra!='v' && letra =='a' && letra =='A'&&letra!='V');
+        
         
         sc.close();
     }
 
-    public static int modulo(int num1,int num2){
-        System.out.println("maximo");
-        if (num1>num2) {
-            return num1;
-        }else if(num2>num1){
-            return num2;
-        }else{
-            return 0;
-        }
+    public static double area(int altura,int radio){
         
+        return 2*Math.PI*radio*(altura+radio);
+        
+    }
+    public static double volumen(int altura,int radio){
+        return Math.PI*Math.pow(radio, 2)*altura;
     }
 }
