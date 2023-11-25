@@ -30,7 +30,9 @@ public class Ejer_06_metodos {
         
     }
     public static double volumen(int altura,int radio){
+
         return Math.PI*Math.pow(radio, 2)*altura;
+        
     }
 
 }
