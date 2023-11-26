@@ -18,6 +18,7 @@ public class Ejer_08_metodos {
                 yenes(euros);
             }
         while (letra!='y' && letra =='Y' && letra =='D'&&letra!='d'&& letra =='l'&&letra!='L');
+        }
     public static void libras(double euros){
             System.out.println("hoal");
     }
@@ -29,4 +30,4 @@ public class Ejer_08_metodos {
     }
     
     }
-}
+

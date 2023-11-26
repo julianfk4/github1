@@ -37,4 +37,7 @@ public class Ejer_07_metodos {
     public static double division(int num1,int num2){
         return num1/num2;
     }
+    public static void come(){
+        System.out.println("hola");
+    }
 }
