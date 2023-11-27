@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class Ejer_08_metodos {
     
-    public static void main(String[] args) {
+public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         double euros;
         System.out.println("Indique cuantos euros quieres cambiar");
@@ -17,17 +17,20 @@ public class Ejer_08_metodos {
             }else if(letra=='y' || letra == 'Y'){
                 yenes(euros);
             }
+
         while (letra!='y' && letra =='Y' && letra =='D'&&letra!='d'&& letra =='l'&&letra!='L');
+        sc.close();
         }
     public static void libras(double euros){
-            System.out.println("hoal");
+            double libras= euros*0.86;
+            System.out.println(libras+"libras");
     }
     public static void dolares(double euros){
-        System.out.println("hola");
+        double dolares= euros*1.28611;
+            System.out.println(dolares+"dolares");
     }
     public static void yenes(double euros){
-        System.out.println("adios");
+        double yenes= euros*129.852;
+            System.out.println(yenes+"yenes");
     }
-    
-    }
-
+}

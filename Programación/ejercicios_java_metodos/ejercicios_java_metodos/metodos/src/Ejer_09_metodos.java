@@ -2,29 +2,18 @@ import java.util.Scanner;
 public class Ejer_09_metodos {
 public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        double euros;
-        System.out.println("Indique cuantos euros quieres cambiar");
-        euros=sc.nextInt();
-        System.err.println("¿a que moneda desea cambiarlos?");
-        String eleccion = sc.next();
-        char letra = eleccion.charAt(0);
-        do
-            if(letra=='l' || letra == 'L'){
-                libras(euros);
-            }else if(letra=='d' || letra == 'D'){
-                dolares(euros);
-            }else if(letra=='y' || letra == 'Y'){
-                yenes(euros);
-            }
-        while (letra!='y' && letra =='Y' && letra =='D'&&letra!='d'&& letra =='l'&&letra!='L');
+        int a=sc.nextInt();
+        int n=sc.nextInt();
+        int resultado = elevador(a, n);
+        System.out.println(resultado);
+        sc.close();
         }
-    public static void libras(double euros){
-            System.out.println("hoal");
-    }
-    public static void dolares(double euros){
-        System.out.println("hola");
-    }
-    public static void yenes(double euros){
-        System.out.println("adios");
-    }
+    public static int elevador(int a, int n){
+        int b=a;
+        for (int i = 1; i < n; i++) {
+            a=a*b;
+        }
+            return a;
+}
+    
 }
