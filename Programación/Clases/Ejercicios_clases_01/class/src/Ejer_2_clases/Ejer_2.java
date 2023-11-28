@@ -8,6 +8,7 @@ public class Ejer_2 {
         Reloj cuenta = new Reloj(sc.nextInt(), sc.nextInt(), sc.nextInt());
         
         cuenta.impresor();
+        cuenta.impresor2();
 
 
     }

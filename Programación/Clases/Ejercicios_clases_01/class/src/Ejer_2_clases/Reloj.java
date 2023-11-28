@@ -18,5 +18,12 @@ public class Reloj {
         System.out.println(horas+":"+minutos+":"+segundos);
 
     }
-    public void 
+    public void impresor2(){
+        if (horas>=12) {
+            horas =horas-12;
+            System.out.println(horas+":"+minutos+":"+segundos+"pm");
+        }else{
+        System.out.println(horas+":"+minutos+":"+segundos+"am");
+        }
+    }
 }
