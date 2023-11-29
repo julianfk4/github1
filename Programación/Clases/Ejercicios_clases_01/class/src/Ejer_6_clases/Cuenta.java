@@ -1,7 +1,7 @@
 package Ejer_6_clases;
 
 public class Cuenta {
-
+    String nombre, numcuenta;
     double tipoInteres, saldo;
 
     public void ingresar(double cantidad){
@@ -27,6 +27,9 @@ public class Cuenta {
         }else{
             this.saldo +=cantidad;
             System.out.println("Saldo actualizado");
-    }
-    }
+
+
+            
+        }
+}
 }
