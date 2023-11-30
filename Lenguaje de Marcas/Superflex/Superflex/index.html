@@ -48,6 +48,7 @@
         section.sec3{
             margin: 0 auto;
             align-items: center;
+            margin-bottom: 100px;
         }
         section.subsec3{
             display: flex;
@@ -58,10 +59,13 @@
             width: 100%;
             flex-wrap:wrap;
         }
+        section.subsec3 div{
+            width: 20%;
+        }
         section.sec4{
             display: flex;
             justify-content: center;
-            height: 800px;
+            height: 400px   px;
             width: 100%;
             margin: 100px;
         }
@@ -75,7 +79,12 @@
             background-color:#0D0355 ;
         }
         section.sec6{
-
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            
+            width: 100%;
+            
         }
         nav.nav1{
         
@@ -97,7 +106,11 @@
             transition: 2s;
         }
         nav.nav2{
-
+            width: 20%;
+            background-color:beige  ;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
         body{
             cursor:url(/img/galaxia.png) 0 0,pointer;
@@ -119,61 +132,68 @@
     </header>
     <section class="sec1">
         <div style="width: 50%;height:1146px"><img src="./img/sun.png" alt="" width="100%" height=1146px> </div>
-        <div style="width: 50%;height:1146px;background-color: #EFF0F9;"></div>
+        <div style="width: 50%;height:1146px;background-color: #EFF0F9;align-items: center;"><h1 style="font-size: 90px;margin-top: 400px;">El verano de nuestra vida</h1><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi perspiciatis harum odit. Iure adipisci ratione quaerat enim! Voluptate mollitia voluptas perspiciatis, exercitationem ducimus temporibus voluptatem laudantium optio incidunt totam officiis?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus excepturi, nobis dolores, ex animi vel esse, natus porro inventore eveniet nihil atque? Expedita, repellendus autem illum saepe velit voluptate porro!Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum similique reiciendis ducimus. Adipisci error aliquam, laboriosam quia temporibus quidem dicta autem, ea hic nemo neque, aperiam vitae? Doloremque, excepturi accusamus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas voluptatum possimus sequi nisi recusandae temporibus, ipsam nam inventore non deserunt quaerat! Repellendus voluptates quidem eaque ipsa eius maxime, inventore officiis?</p></div>
     </section>
     <section class="sec2">
-        <article>
-            <div>       Pack Bronce</div>
+        <article style="display: flex;flex-direction: column;justify-content: space-evenly;">
+            <div><p align="center" style="font-size: 60px;">Pack Bronce</p><p align="center" style="font-size: 60px;">50$</p></div>
+            <a href="" style="width: 60px;margin: 0 auto;"><strong align="center"> EQUIPO</strong></a>
+            <a href="" style="width: 60px;margin: 0 auto;"><strong align="center"> EQUIPO</strong></a>
         </article>
-        <article>
-            <div>       PAck Plata</div>
+        <article style="display: flex;flex-direction: column;justify-content: space-evenly;">
+            <div><p align="center" style="font-size: 60px;">Pack Plata</p><p align="center" style="font-size: 60px;">100$</p></div>
+            <a href="" style="width: 60px;margin: 0 auto;"><strong align="center"> EQUIPO</strong></a>
+            <a href="" style="width: 60px;margin: 0 auto;"><strong align="center"> EQUIPO</strong></a>
         </article>
-        <article>
-            <div>       PAck Oro</div>
+        <article style="display: flex;flex-direction: column;justify-content: space-evenly;">
+            <div><p align="center" style="font-size: 60px;">Pack Oro</p><p align="center" style="font-size: 60px;">150$</p></div>
+            <a href="" style="width: 60px;margin: 0 auto;"><strong align="center"> EQUIPO</strong></a>
+            <a href="" style="width: 60px;margin: 0 auto;"><strong align="center"> EQUIPO</strong></a>
         </article>
     </section>
     <section class="sec3">
         <div style="width: 500px; margin: 0 auto;">
-            <h1 >Nuestro equipo de profesionales</h1>
-            <h2 style="width: 200px;margin: 0 auto;">loco</h2>
+            <h1 >Nuestro equipo</h1>
+            <h2 style="width: 200px;margin: 0 auto;">un equipo de peofesionales</h2>
         </div>
         <section class="subsec3">
-            <div><img src="./img/Usuarios/user1.png" alt="" width="430px"></div>
-            <div><img src="./img/Usuarios/user10.png" alt=""width="430px"></div>
-            <div><img src="./img/Usuarios/user2.png" alt=""width="430px"v></div>
-            <div><img src="./img/Usuarios/user3.png" alt=""width="430px"></div>
-            <div><img src="./img/Usuarios/user4.png" alt=""width="430px"></div>
-            <div><img src="./img/Usuarios/user5.png" alt=""width="430px"></div>
-            <div><img src="./img/Usuarios/user6.png" alt=""width="430px"></div>
-            <div><img src="./img/Usuarios/user7.png" alt=""width="430px"></div>
-            <div><img src="./img/Usuarios/user8.png" alt=""width="430px"></div>
-            <div><img src="./img/Usuarios/user9.png" alt=""width="430px"></div>
+            <div><img src="./img/Usuarios/user1.png" alt="" width="100%"></div>
+            <div><img src="./img/Usuarios/user10.png" alt=""width="100%"></div>
+            <div><img src="./img/Usuarios/user2.png" alt=""width="100%"v></div>
+            <div><img src="./img/Usuarios/user3.png" alt=""width="100%"></div>
+            <div><img src="./img/Usuarios/user4.png" alt=""width="100%"></div>
+            <div><img src="./img/Usuarios/user5.png" alt=""width="100%"></div>
+            <div><img src="./img/Usuarios/user6.png" alt=""width="100%"></div>
+            <div><img src="./img/Usuarios/user7.png" alt=""width="100%"></div>
+            <div><img src="./img/Usuarios/user8.png" alt=""width="100%"></div>
+            <div><img src="./img/Usuarios/user9.png" alt=""width="100%"></div>
         </section>
     </section>
     <section class="sec4">
-        <div style="width: 25%; height: 800px;"><img src="./img/fruta3.png" alt="" width="640px"></div>
-        <div>
-            <div style="height: 374px; width: 25%;"><img src="./img/fruta2.png" alt=""width="640px"></div>
-            <div style="width: 25%;"><img src="./img/fruta1.png" alt=""width="640px"></div>
+        <div style="width: 25%;"><img src="./img/fruta3.png" alt="" width="100%"><div style="background-color:#fefefe; width: 100%;"></div></div>
+        <div style="width: 25%;">
+            <div style=" width: 100%;margin-bottom: 0px;"><img src="./img/fruta2.png" alt=""width="100%"><div></div></div>
+            <div style="width: 100%;margin-top: 0px;"><img src="./img/fruta1.png" alt=""width="100%"><div></div></div>
         </div>
     </section>
     <section class="sec5">
         <div style="width: 40%;">
             <div style="width: 35%;">
-                <h1>hola</h1>
-                <h2>adios</h2>
+                <h2 style="font-size: 40px;color: aquamarine;">Nuestros </h2>
+                <h1 style="font-size: 70px;color: aquamarine;">Ponentes</h1>
+                <h3 style="font-size: 20px;color: #EFF0F9;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente </h3>
             </div>
         </div>
-        <div style="width: 50%; display: flex;flex-direction: row;justify-content:space-between; height: 800px;">
-            <div style="width: 30%;height: 800px;">
+        <div style="width: 50%; display: flex;flex-direction: row;justify-content:space-between;">
+            <div style="width: 30%;">
                 <div><img src="./img/men1.png" alt="" width="100%"></div>
                 <h3>soy</h3>
             </div>
-            <div style="width: 30%;height: 800px;">
+            <div style="width: 30%;">
                 <div><img src="./img/men2.png" alt="" width="100%"></div>
                 <h3>tambien</h3>
             </div>
-            <div style="width: 30%;height: 800px;">
+            <div style="width: 30%;">
                 <div><img src="./img/woman.png" alt="" width="100%"></div>
                 <h3>soy<br><br>
                 </h3>
@@ -182,9 +202,11 @@
     </section>
     <section class="sec6">
         <nav class="nav2">
-
+            <a href=""><strong> HOME</strong></a>
+            <a href=""><strong> EQUIPO</strong></a>
+            <a href=""><strong> CONTACTO</strong></a>
         </nav>
-        <div></div>
+        <div style="width: 80%;"><img src="./img/chica-contenta.png" alt="" width="100%"></div>
     </section>
 </body>
 </html>
