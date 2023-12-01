@@ -1,0 +1,490 @@
+------------------Crear y arrancar un proyecto desde el servidor:------------------------------
+
+Para comenzar un proyecto en PHP, es necesario tener un servidor web configurado, como Apache o Nginx. Puedes usar herramientas como XAMPP o Wamp para configurar un entorno local.
+Crea una carpeta para tu proyecto y coloca tus archivos PHP en ella.
+Para arrancar el proyecto, inicia el servidor y accede a tu archivo PHP a través de un navegador (por ejemplo, http://localhost/tu_proyecto/tu_archivo.php).
+
+
+
+-------------------------------------Crear variables:-------------------------------
+
+En PHP, puedes crear variables simplemente asignando un valor a un nombre. Por ejemplo, $nombre = "Juan"; crea una variable llamada $nombre con el valor "Juan".
+Las variables en PHP son sensibles a mayúsculas y minúsculas.
+
+
+
+-----------------------Usar variables superglobales con formularios y enlaces:------------------------------
+
+Las variables superglobales son arreglos predefinidos en PHP que almacenan información como datos del formulario, variables del servidor, etc.
+$_GET y $_POST son dos superglobales comunes utilizadas para capturar datos de formularios.
+
+
+
+----------------------------------Ejemplo con formulario:----------------------------------
+php
+Copy code
+<form action="procesar.php" method="post">
+    <input type="text" name="nombre">
+    <input type="submit" value="Enviar">
+</form>
+En el archivo "procesar.php":
+php
+Copy code
+<?php
+$nombre = $_POST['nombre'];
+echo "Hola, $nombre";
+?>
+
+
+
+------------------------VARIABLES SUPERGLOBALES----------------------------------------
+En PHP, las variables superglobales son arreglos predefinidos que están disponibles en todos los ámbitos del script. Estas variables contienen información valiosa, como datos del formulario, información del servidor, sesiones, cookies, etc. Son "superglobales" porque se pueden acceder desde cualquier parte del script sin necesidad de declararlas como globales.
+
+Aquí hay algunas de las variables superglobales más comunes y cómo se utilizan:
+
+$_GET:
+
+Almacena datos enviados al script a través del método GET, generalmente desde la URL.
+Ejemplo:
+php
+Copy code
+// URL: http://ejemplo.com/mi_script.php?nombre=Juan
+$nombre = $_GET['nombre'];
+echo $nombre; // Mostrará "Juan"
+$_POST:
+
+Contiene datos enviados al script a través del método POST, comúnmente desde formularios HTML.
+Ejemplo:
+php
+Copy code
+// En un formulario HTML con method="post"
+// <form action="mi_script.php" method="post">
+//     <input type="text" name="apellido">
+//     <input type="submit" value="Enviar">
+// </form>
+
+$apellido = $_POST['apellido'];
+echo $apellido; // Muestra el valor del campo de formulario "apellido"
+$_SESSION:
+
+Se utiliza para almacenar variables de sesión y mantener la información entre páginas durante la visita de un usuario.
+Ejemplo:
+php
+Copy code
+// En la página de inicio de sesión
+session_start();
+$_SESSION['usuario'] = 'Juan';
+
+// En otra página
+session_start();
+echo $_SESSION['usuario']; // Muestra "Juan"
+$_COOKIE:
+
+Contiene datos enviados al navegador y almacenados como cookies.
+Ejemplo:
+php
+Copy code
+// Configuración de una cookie
+setcookie("idioma", "espanol", time() + 3600, "/"); // Caduca en una hora
+
+// Lectura de la cookie
+echo $_COOKIE['idioma']; // Muestra "espanol"
+Estas son solo algunas de las variables superglobales disponibles en PHP. Dependiendo de tus necesidades, también hay otras, como $_REQUEST, $_FILES, $_SERVER, y más. Es crucial manejarlas con cuidado y validar la entrada del usuario para evitar posibles vulnerabilidades de seguridad.
+
+
+
+
+
+
+----------------------------CONSTANTES-----------------------------------------------
+
+En PHP, las constantes son identificadores (nombres) que representan un valor único o una expresión constante. A diferencia de las variables, una vez que defines una constante, no puedes cambiar su valor durante la ejecución del script. Las constantes son útiles cuando necesitas almacenar valores que no deben modificarse a lo largo del código.
+
+A continuación, te explico cómo definir y utilizar constantes en PHP:
+
+Definir Constantes:
+php
+Copy code
+define("NOMBRE_CONSTANTE", "Valor de la constante");
+define: Es la función que se utiliza para definir una constante.
+NOMBRE_CONSTANTE: Es el nombre de la constante, que se recomienda escribir en mayúsculas.
+"Valor de la constante": Es el valor asignado a la constante.
+Ejemplo:
+
+php
+Copy code
+define("PI", 3.14);
+define("NOMBRE", "Juan");
+
+echo PI;  // Imprime 3.14
+echo NOMBRE;  // Imprime Juan
+Ventajas de usar constantes:
+Legibilidad del código: Al usar constantes con nombres descriptivos, facilitas la comprensión del código a otras personas y a ti mismo.
+
+Evita errores accidentales: Al ser constantes, no puedes cambiar su valor accidentalmente, lo que ayuda a prevenir errores en el código.
+
+Constantes predefinidas:
+PHP también proporciona algunas constantes predefinidas que son útiles, como PHP_VERSION, que contiene la versión actual de PHP, o PHP_OS, que contiene el nombre del sistema operativo.
+
+php
+Copy code
+echo PHP_VERSION;  // Imprime la versión de PHP instalada
+echo PHP_OS;  // Imprime el sistema operativo en el que se está ejecutando PHP
+Recuerda que las constantes no utilizan el símbolo $ antes del nombre, a diferencia de las variables. Además, una vez que defines una constante, no puedes cambiar su valor ni eliminarla durante la ejecución del script.
+
+
+
+
+
+
+
+------------------------------------------ARRAYS-----------------------------------------------------
+			1. Introducción a Arrays:
+Un array en PHP es una estructura que permite almacenar múltiples valores bajo un solo nombre.
+Pueden contener datos de cualquier tipo: números, cadenas, otros arrays, etc.
+
+			2. Creación de Arrays:
+Indexados:
+php
+Copy code
+$numeros = array(1, 2, 3, 4, 5);
+Asociativos:
+php
+Copy code
+$persona = array("nombre" => "Juan", "edad" => 25, "ciudad" => "Ejemplo");
+
+
+			3. Acceso a Elementos:
+Utilizamos el índice para acceder a un elemento en un array indexado:
+php
+Copy code
+echo $numeros[2]; // Imprime el tercer elemento (índice 2) del array.
+Utilizamos la clave para acceder a un elemento en un array asociativo:
+php
+Copy code
+echo $persona["nombre"]; // Imprime el valor asociado a la clave "nombre".
+
+
+			4. Funciones Útiles:
+count:
+php
+Copy code
+$total_elementos = count($numeros); // Obtiene la cantidad de elementos en el array.
+array_push:
+php
+Copy code
+array_push($numeros, 6); // Añade un elemento al final del array.
+array_pop:
+php
+Copy code
+$ultimo_elemento = array_pop($numeros); // Elimina y devuelve el último elemento del array.
+
+
+
+			5. Recorrido de Arrays:
+foreach:
+php
+Copy code
+foreach ($numeros as $numero) {
+    echo $numero;
+}
+foreach con clave y valor:
+php
+Copy code
+foreach ($persona as $clave => $valor) {
+    echo "$clave: $valor";
+}
+
+
+
+			6. Arrays Multidimensionales:
+Un array que contiene uno o más arrays.
+Acceso a elementos:
+php
+Copy code
+$matriz = array(array(1, 2, 3), array("a", "b", "c"));
+echo $matriz[1][2]; // Imprime el tercer elemento del segundo array.
+
+
+			7. Ordenar Arrays:
+sort:
+php
+Copy code
+sort($numeros); // Ordena el array en orden ascendente.
+rsort:
+php
+Copy code
+rsort($numeros); // Ordena el array en orden descendente.
+asort:
+php
+Copy code
+asort($persona); // Ordena un array asociativo por valor manteniendo la asociación clave-valor.
+Estos conceptos básicos y funciones te ayudarán a abordar problemas prácticos relacionados con arrays en PHP.
+
+
+
+
+--------------------------------------CONDICIONALES--------------------------------------------
+Condicionales, Operadores de Comparación y Operadores Lógicos en PHP
+
+
+			1. Condicionales:
+Las estructuras condicionales permiten ejecutar bloques de código dependiendo de si una condición es verdadera o falsa.
+La estructura básica es el if:
+php
+Copy code
+$edad = 20;
+
+if ($edad >= 18) {
+    echo "Eres mayor de edad";
+} else {
+    echo "Eres menor de edad";
+}
+
+
+			2. Operadores de Comparación:
+Estos operadores se utilizan para comparar dos valores y devolver un resultado booleano.
+Ejemplos:
+php
+Copy code
+$a = 5;
+$b = 10;
+
+echo $a == $b; // Igual a
+echo $a != $b; // Diferente de
+echo $a < $b;  // Menor que
+echo $a > $b;  // Mayor que
+echo $a <= $b; // Menor o igual que
+echo $a >= $b; // Mayor o igual que
+
+
+			3. Operadores Lógicos:
+Permiten combinar múltiples expresiones lógicas.
+&& (AND): Retorna true si ambas expresiones son verdaderas.
+|| (OR): Retorna true si al menos una de las expresiones es verdadera.
+! (NOT): Retorna true si la expresión es falsa y viceversa.
+Ejemplos:
+php
+Copy code
+$temperatura = 25;
+$llueve = false;
+
+if ($temperatura > 20 && !$llueve) {
+    echo "Hace buen tiempo";
+}
+
+
+
+
+			4. Condicionales Múltiples:
+Se pueden usar múltiples bloques if y else if para evaluar condiciones en cascada.
+Ejemplo:
+php
+Copy code
+$nota = 75;
+
+if ($nota >= 90) {
+    echo "A";
+} elseif ($nota >= 80) {
+    echo "B";
+} elseif ($nota >= 70) {
+    echo "C";
+} else {
+    echo "Reprobado";
+}
+
+
+
+			5. Operador Ternario:
+Permite expresar condicionales de forma más concisa.
+Ejemplo:
+php
+Copy code
+$edad = 22;
+$estatus = ($edad >= 18) ? "Mayor de edad" : "Menor de edad";
+echo $estatus;
+
+
+
+
+-----------------------------------BUCLES--------------------------------------------
+
+
+			1. Bucle While:
+Ejecuta un bloque de código mientras la condición sea verdadera.
+Sintaxis:
+php
+Copy code
+$contador = 0;
+
+while ($contador < 5) {
+    echo $contador;
+    $contador++;
+}
+
+
+			2. Bucle Do-While:
+Similar al bucle while, pero la condición se evalúa después de ejecutar el bloque de código.
+Garantiza que el bloque se ejecutará al menos una vez.
+Sintaxis:
+php
+Copy code
+$contador = 0;
+
+do {
+    echo $contador;
+    $contador++;
+} while ($contador < 5);
+
+
+			3. Bucle For:
+Utilizado cuando se conoce el número exacto de iteraciones.
+Sintaxis:
+php
+Copy code
+for ($i = 0; $i < 5; $i++) {
+    echo $i;
+}
+
+
+			4. Bucle Foreach:
+Especialmente diseñado para recorrer arrays.
+Sintaxis:
+php
+Copy code
+$colores = array("rojo", "verde", "azul");
+
+foreach ($colores as $color) {
+    echo $color;
+}
+
+
+			5. Instrucciones Break y Continue:
+Break: Rompe el bucle y sale de él.
+php
+Copy code
+for ($i = 0; $i < 10; $i++) {
+    if ($i == 5) {
+        break;
+    }
+    echo $i;
+}
+Continue: Salta a la siguiente iteración del bucle.
+php
+Copy code
+for ($i = 0; $i < 5; $i++) {
+    if ($i == 2) {
+        continue;
+    }
+    echo $i;
+}
+		
+
+			6. Bucles Anidados:
+Puedes utilizar bucles dentro de otros bucles.
+Ejemplo:
+php
+Copy code
+for ($i = 0; $i < 3; $i++) {
+    for ($j = 0; $j < 3; $j++) {
+        echo "($i, $j) ";
+    }
+    echo "<br>";
+}
+			
+
+			7. Uso de Etiquetas para Bucles:
+Puedes etiquetar bucles para controlar cuál quieres romper o continuar.
+Ejemplo:
+php
+Copy code
+outerLoop:
+for ($i = 0; $i < 3; $i++) {
+    for ($j = 0; $j < 3; $j++) {
+        if ($j == 2) {
+            break outerLoop;
+        }
+        echo "($i, $j) ";
+    }
+    echo "<br>";
+}
+
+
+
+-------------------FUNCIONES PREd o NATIV-----------------------------------------------
+
+
+			1. Fecha Actual:
+date(formato) devuelve la fecha actual en el formato especificado.
+php
+Copy code
+echo date("Y-m-d H:i:s"); // Formato: Año-Mes-Día Hora:Minutos:Segundos
+
+
+			2. Zona Horaria:
+date_default_timezone_set(zona) establece la zona horaria para las funciones de fecha y hora.
+php
+Copy code
+date_default_timezone_set("America/New_York");
+
+
+
+			3. Crear una Fecha Específica:
+mktime(hora, minuto, segundo, mes, día, año) crea una fecha y hora especificadas.
+php
+Copy code
+$fecha_personalizada = mktime(12, 30, 0, 6, 15, 2022);
+echo date("Y-m-d H:i:s", $fecha_personalizada);
+
+
+			4. Fecha en Formato Unix:
+time() devuelve la fecha actual en formato Unix (número de segundos desde el 1 de enero de 1970).
+php
+Copy code
+$tiempo_actual = time();
+
+
+			5. Desglose de una Fecha:
+getdate(tiempo) devuelve un array asociativo con la información de una fecha.
+php
+Copy code
+$informacion_fecha = getdate();
+print_r($informacion_fecha);
+
+
+			6. Diferencia entre Fechas:
+strtotime(fecha) convierte una cadena de fecha en formato legible por strtotime.
+diff(fecha1, fecha2) devuelve la diferencia entre dos fechas.
+php
+Copy code
+$fecha1 = strtotime("2022-01-01");
+$fecha2 = strtotime("2022-12-31");
+
+$diferencia = ($fecha2 - $fecha1) / (60 * 60 * 24); // Diferencia en días
+
+
+			7. Formato de Fechas Personalizado:
+date_create(fecha) crea un objeto de fecha y hora.
+format(formato) devuelve la fecha y hora formateada según el formato especificado.
+php
+Copy code
+$fecha_objeto = date_create("2022-05-20");
+echo date_format($fecha_objeto, "d/m/Y");
+
+
+			8. Funciones Relativas al Tiempo:
+strtotime(fecha) convierte una cadena de fecha en un timestamp Unix.
+date_add(objeto, intervalo) agrega un intervalo de tiempo a una fecha.
+php
+Copy code
+$fecha_actual = date_create();
+date_add($fecha_actual, date_interval_create_from_date_string("1 day"));
+echo date_format($fecha_actual, "Y-m-d");
+
+
+			9. Días de la Semana y Meses:
+date("l") devuelve el día de la semana.
+date("F") devuelve el nombre completo del mes.
+php
+Copy code
+echo "Hoy es " . date("l") . " de " . date("F");
