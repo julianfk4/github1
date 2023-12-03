@@ -18,5 +18,6 @@ public class Ejer_3_clases {
                 nuevolibro.prestar();
             }
         }
+        sc.close();
     }
 }

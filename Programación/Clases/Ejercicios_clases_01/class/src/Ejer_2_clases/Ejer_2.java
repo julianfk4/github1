@@ -10,6 +10,6 @@ public class Ejer_2 {
         cuenta.impresor();
         cuenta.impresor2();
 
-
+        sc.close();
     }
 }

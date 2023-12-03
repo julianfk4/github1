@@ -59,7 +59,7 @@ public class Empleado {
     public boolean isCasado() {
         return casado;
     }
-
+    
     public void setCasado(boolean casado) {
         this.casado = casado;
     }
