@@ -5,4 +5,7 @@ public class Equipo {
     private String nombre, ciudad;
     private int puntos, golesfav, golesnofav;
     
+
+
+    
 }
