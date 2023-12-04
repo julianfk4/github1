@@ -1,4 +1,4 @@
-------------------Crear y arrancar un proyecto desde el servidor:------------------------------
+9    ------------------Crear y arrancar un proyecto desde el servidor:------------------------------
 
 Para comenzar un proyecto en PHP, es necesario tener un servidor web configurado, como Apache o Nginx. Puedes usar herramientas como XAMPP o Wamp para configurar un entorno local.
 Crea una carpeta para tu proyecto y coloca tus archivos PHP en ella.
@@ -354,7 +354,7 @@ php
 Copy code
 $colores = array("rojo", "verde", "azul");
 
-foreach ($colores as $color) {
+foreach ($colores as $key => "verde") {
     echo $color;
 }
 
