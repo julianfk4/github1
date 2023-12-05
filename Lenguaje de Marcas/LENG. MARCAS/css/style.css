@@ -1,0 +1,36 @@
+.navega{
+    margin: 40px;
+    display: inline-block;
+    
+}
+nav{
+    position: absolute;
+    right: 0px;
+    display: inline-block;
+    
+    margin: 40px;
+}
+header{
+    padding: 20px;
+}
+nav a.blu{
+    
+    background-color: rgb(80, 143, 231);
+    
+}
+nav a{
+    font-size: 30px;
+    margin: 0px 50px;
+    color: rgb(130, 144, 156);
+    
+    padding: 15px 35px;
+    border-radius: 70px;
+}
+section a{
+    padding: 10px;
+    border: solid 0.5px;
+    border-radius: 80px;
+    border-color: aliceblue;
+    color: aliceblue;
+    
+}

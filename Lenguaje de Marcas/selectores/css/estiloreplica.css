@@ -1,0 +1,40 @@
+article.lol a{
+    margin: 10px;
+    padding: 10px;
+    background-color: rgb(106, 6, 136);
+    border-radius: 8px;
+    display: block;
+    width: 40px;
+    color: black;
+  
+    
+}
+article.lol a:hover{
+    margin: 10px;
+    padding: 10px;
+    background-color: red;
+    border-radius: 8px;
+    display: block;
+    color: grey;
+   
+}
+section{
+    margin: 10px;
+}
+article a:hover{
+    margin: 15px;
+    padding: 10px;
+    background-color: red;
+    border-radius: 8px;
+    color: grey;
+   
+}
+article a{
+    margin: 15px;
+    padding: 10px;
+    background-color: rgb(106, 6, 136);
+    border-radius: 8px;
+    color: red;
+  
+    
+}

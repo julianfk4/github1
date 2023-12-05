@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    position: sticky;
+    top: 0;
+}
+nav div{
+    display: inline-block;
+    padding: 30px;
+    color: antiquewhite;
+    border-radius: 9px;
+    margin: 30px;
+}
+nav div:hover{
+    display: inline-block;
+    padding: 30px;
+    color: rgb(226, 137, 20);
+    background-color: aqua;
+}
+nav{
+    position: absolute;
+    right: 0;
+    display: inline-block;
+   
+}
+footer div.enlace{
+    position: absolute;
+    right: 0;
+    display: inline-block;
+}
+footer div.enlace a{
+    display: inline-block;
+    padding: 50px;
+    color: rgb(12, 182, 224);
+}

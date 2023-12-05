@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .abuelo{
+            display: flex;
+            background-color: #002626;
+            justify-content: space-around;
+            align-items: center;
+            height: 500px;
+        }
+        .abuelo2{
+            display: flex;
+            background-color: #0E4749;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .padre2{
+            background-color:#F786AA;
+            padding: 0px;
+            margin: 30px ;
+            transition: 0.5s;
+        }
+        .padre2:hover{
+            background-color:#F786AA;
+            padding: 10px;
+            margin: 30px ;
+            
+        }
+        .padre1{
+            background-color: #A14A76;
+            padding: 0px;
+            margin: 30px ;
+            transition:0.5s;
+        }
+        .padre1:hover{
+            background-color: #A14A76;
+            padding: 10px;
+            margin: 30px ;
+            
+        }
+        .caja1{
+            background-color: #F786AA;
+            width: 250px;
+            height: 250px;
+            margin: 50px;
+        }
+        .caja2{
+            background-color: pink;
+            width: 250px;
+            height: 250px;
+            margin: 50px;
+        }
+        .caja3{
+            background-color: green;
+            width: 250px;
+            height: 250px;
+            margin: 50px;
+        }
+        .circle{
+            border-radius: 1000%;
+            background-color:#F786AA;
+            width: 250px;
+            height: 250px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="abuelo">
+        <div>
+            <div class="padre1 ">
+                <img src="./img/starfield.jpeg" width="280px" height="280px">
+            </div>
+        </div>
+        <div style="background-color: #125254; width: 200px; height: 300px;"></div>
+        <div style="display: flex;">
+            <div class="padre1" style="justify-content:space-between
+            ;">
+                <img src="./img/Logo.png" width="270px" height="270px">
+            </div>
+            <div class="padre2">
+                <img src="./img/Logo.png" width="270px" height="270px">
+            </div>
+            <div class="padre1">
+                <img src="./img/Logo.png" width="270px" height="270px">
+            </div>
+        </div>
+    </div>
+
+    <div class="abuelo2">
+        <div class="padre1">
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+        <div class="padre1">
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+    </div>
+    
+</body>
+</html>

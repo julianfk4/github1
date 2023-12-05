@@ -1,0 +1,55 @@
+
+#servicio{
+    background-color: blueviolet;
+}
+body {
+    background-image: url(/img/madera.jfif);
+}
+
+.lool{
+    background-color: red;
+}
+.it1{
+    background-color: blue;
+}
+.it2{
+    background-color: red;
+}
+
+#marron{
+    width:22%; 
+    display: inline-block; 
+    background-color: rgb(90, 70, 39);
+}
+#marronn{
+    width:22%; 
+    display: inline-block;
+    background-color:  rgb(41, 5, 5);
+}
+#seccion{
+    background-color:brown;
+}
+#seccion h1{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+section{
+    background-color: gray;
+}
+#seccion2{
+    background-color: brown;
+}
+#seccion3{
+    background-color: brown;
+}
+#seccion4{
+    background-color: maroon;
+}
+#seccion2 h1{
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+#seccion3 p{
+    color: blue;
+}
+#seccion4 p{
+    color: red;
+}
