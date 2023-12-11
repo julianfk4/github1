@@ -12,7 +12,7 @@ public class Main_1 {
         System.out.println("Que desea hacer?");
         System.out.println("A) Cambio de nombre a mascota");
         System.out.println("B) Actualizar edad");
-        System.out.println("¿C) Información sobre chip");
+        System.out.println("C) Información sobre chip");
         System.out.println("D) Actualización general de informacion");
         System.out.println("F) Salir del sistema");
         
@@ -34,6 +34,9 @@ public class Main_1 {
                 break;
             case "D":
                 animal1.cambiodato();
+                break;
+            case "F":
+                eleccion= "F";
                 break;
         }
         }

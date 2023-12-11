@@ -1,5 +1,7 @@
 package Ejer_2_julian;
 
+import java.util.Scanner;
+
 public class Equipo {
     private String nombre;
     private String ciudad;
@@ -23,6 +25,8 @@ public class Equipo {
 
     // Getters y setters
     public String getNombre() {
+        Scanner sc = new Scanner(System.in);
+        nombre = sc.nextLine();
         return nombre;
     }
 
@@ -31,6 +35,8 @@ public class Equipo {
     }
 
     public String getCiudad() {
+        Scanner sc = new Scanner(System.in);
+        ciudad = sc.nextLine();
         return ciudad;
     }
 

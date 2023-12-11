@@ -1,11 +1,5 @@
 package Ejer_4_julian;
 
-// Clase DNI (puedes ajustarla según tus necesidades)
-class DNI {
-    // Implementación de la clase DNI
-}
-
-// Clase Vehiculo
 class Vehiculo {
     private String marca;
     private String modelo;

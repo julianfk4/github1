@@ -1,7 +1,10 @@
 package Ejer_2_julian;
 
+import java.util.Random;
+
 public class Main_2 {
     public static void main(String[] args) {
+        Random rnd = new Random();
         // Crear un equipo usando el primer constructor
         Equipo equipo1 = new Equipo("Equipo A", "Ciudad A", 0, 0, 0);
 
@@ -27,8 +30,15 @@ public class Main_2 {
         System.out.println();
 
         // Jugar un partido usando la versión i del método
-        equipo1.jugarPartido(true); // Ganó, se suman 3 puntos
-        equipo2.jugarPartido(false); // Empató, se suman 1 punto
+        int resultado= rnd.nextInt(0,2);
+        if (resultado==0) {
+            equipo1.jugarPartido(true); // Ganó, se suman 3 puntos
+            equipo2.jugarPartido(false); // No ganó, empate o perdido
+        }else{
+            equipo1.jugarPartido(false); // No ganó, empate o perdido
+            equipo2.jugarPartido(true); // Ganó, se suman 3 puntos
+        }
+        
 
         // Imprimir información actualizada después del partido
         System.out.println("Después del primer partido:");
@@ -38,20 +48,28 @@ public class Main_2 {
 
         // Jugar otro partido usando la versión ii del método
         equipo1.jugarPartido(false, 2); // Empató y anotó 2 goles
+        equipo2.jugarPartido(false, 2); // Empató y anotó 2 goles
 
         // Imprimir información actualizada después del segundo partido
         System.out.println("Después del segundo partido:");
         System.out.println("Equipo 1 - Puntos: " + equipo1.getPuntos());
         System.out.println("Equipo 1 - Goles a favor: " + equipo1.getGolesFavor());
+        System.out.println("Equipo 2 - Puntos: " + equipo2.getPuntos());
+        System.out.println("Equipo 2 - Goles a favor: " + equipo2.getGolesFavor());
         System.out.println();
 
         // Jugar otro partido usando la versión iii del método
+        equipo1.jugarPartido(false, 1, 3); // Ganó, anotó 3 goles y recibió 1 gol
         equipo2.jugarPartido(true, 3, 1); // Ganó, anotó 3 goles y recibió 1 gol
 
         // Imprimir información actualizada después del tercer partido
         System.out.println("Después del tercer partido:");
+        System.out.println("Equipo 1 - Puntos: " + equipo1.getPuntos());
+        System.out.println("Equipo 1 - Goles a favor: " + equipo1.getGolesFavor());
+        System.out.println("Equipo 1 - Goles en contra: " + equipo1.getGolesContra());
         System.out.println("Equipo 2 - Puntos: " + equipo2.getPuntos());
         System.out.println("Equipo 2 - Goles a favor: " + equipo2.getGolesFavor());
         System.out.println("Equipo 2 - Goles en contra: " + equipo2.getGolesContra());
+        System.out.println();
     }
 }
