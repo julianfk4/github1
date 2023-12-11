@@ -15,27 +15,22 @@ class Vehiculo {
     private boolean pasajerosEnFerry;
     private boolean cargadoEnFerry;
 
-    // Constructor por defecto
+    // Constructores
     public Vehiculo() {
-        // Inicialización por defecto o valores nulos
     }
 
-    // Constructor con todos los datos menos la presencia de pasajeros
     public Vehiculo(String marca, String modelo, String matricula, String fechaMatriculacion,
                     String color, String tipoCombustible, double peso, double volumen,
                     int numRuedas, int numPasajeros, DNI dniTitular) {
-        // Inicializar variables con los parámetros proporcionados
     }
 
-    // Constructor con todos los datos
     public Vehiculo(String marca, String modelo, String matricula, String fechaMatriculacion,
                     String color, String tipoCombustible, double peso, double volumen,
                     int numRuedas, int numPasajeros, DNI dniTitular,
                     boolean pasajerosEnFerry, boolean cargadoEnFerry) {
-        // Inicializar variables con los parámetros proporcionados
     }
 
-    // Getters y setters (uno de ejemplo)
+    // Getters y setters
     public boolean isPasajerosEnFerry() {
         return pasajerosEnFerry;
     }
