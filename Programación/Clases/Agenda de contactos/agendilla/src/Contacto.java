@@ -1,8 +1,7 @@
-import java.util.Scanner;
-
 public class Contacto {
 
-    private int id, num_telef;
+    private int id;
+    private int num_telef;
     private String nombre;
     
     public Contacto(String nombre,int num_telef){
@@ -39,14 +38,13 @@ public class Contacto {
         this.nombre = nombre;
     }
 
-    public boolean esIgual(String nombre){
-        Scanner sc = new Scanner(System.in);
-        boolean esIgual=true;
-        String nombre1= sc.nextLine();
-        if(nombre){
-            esIgual=false;
-        }
-
-        return esIgual;
+    public boolean esIgual(String nombre) {
+        return this.nombre.equals(nombre);
     }
+
+    public void imprimir() {
+        System.out.println("ID: " + id + ", Nombre: " + nombre + ", Teléfono: " + num_telef);
+    }
+
 }
+
