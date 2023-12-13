@@ -1,0 +1,48 @@
+div.container h1{
+    font-family: monospace;
+    color: chocolate;
+}
+div.box p{
+    margin: 2%;
+    padding-bottom: 20px;
+}
+p{
+    background-color: blue;
+    font-family:fantasy
+}
+.principal{
+    color: red;
+    font-size: 20px;
+}
+.principal:hover{
+    color: purple;
+    font-size: 50px;
+}
+
+h1:focus{
+    color:green;
+    font-size: 80;
+}
+ul{
+    list-style-type: square;
+}
+.especial{
+    color: coral;
+    background-color: azure;
+}
+li{
+    background-color: gainsboro;
+}
+.highlight{
+    background-color: blueviolet;
+    color: black;
+}
+a{
+    text-decoration:underline;
+    color: coral;
+}
+a:hover{
+    color: chocolate;
+    text-decoration: dashed;
+    background-color: coral;
+}
