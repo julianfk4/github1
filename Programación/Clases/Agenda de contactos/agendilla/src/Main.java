@@ -11,9 +11,10 @@ public class Main {
         System.out.println("introduce contacto");
 
         Contacto contacto1 = new Contacto(nombre2=sc.nextLine(), sc.nextInt());
-        
+
         if (contacto1.esIgual(nombre2)){
             System.out.println("hola");
+            
         }
     }
 }
