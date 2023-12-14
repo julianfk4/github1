@@ -1,0 +1,50 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    width:100% ;
+    height:100% ;
+    background-color: #3F3B3B;
+}
+header{
+    background-color: #282525;
+    height: 20%;
+    width: 100%;
+    background-size: cover;
+    
+}
+nav{
+    display: flex;
+    justify-content: center;
+    
+}
+div.eleccion{
+    width: 8%;
+    margin:0.8% 6%;
+}
+div.eleccion img{
+    height: 100%;
+    width: 100%;
+}
+section{
+    display: flex;
+    justify-content: center;
+}
+div.simbolo{
+    margin-top: 20%;
+    background-color: aliceblue;
+    width: 15%;
+    height: 250%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+div.simbolo div{
+    width: 100%;
+    margin-top: 70%;
+}
+div.simbolo div img{
+    width: 100%;
+}
