@@ -50,7 +50,7 @@ public class Animal {
         this.tieneChip=tieneChip;
         
     }
-    public void cambiodato(){
+    public void verdato(){
         System.out.println(nombre);
         System.out.println(edad);
         System.out.println(tieneChip);

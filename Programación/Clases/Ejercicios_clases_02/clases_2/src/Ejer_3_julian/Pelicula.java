@@ -65,7 +65,7 @@ public class Pelicula {
         return comprado;
     }
 
-    // Método comprar
+    // Métodos
     public void comprar() {
         if (!comprado) {
             comprado = true;
@@ -75,7 +75,7 @@ public class Pelicula {
         }
     }
 
-    // Método devolución
+   
     public void devolucion() {
         if (comprado) {
             comprado = false;
@@ -85,7 +85,7 @@ public class Pelicula {
         }
     }
 
-    // Método compareTo
+   
     public boolean compareTo(Pelicula otraPelicula) {
         return this.duracion > otraPelicula.getDuracion();
     }

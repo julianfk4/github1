@@ -3,17 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mostrar Imagen</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./estilos/estilodeprueba.css">
+    <title>Video de Fondo</title>
 </head>
 <body>
+    <header style="height: 5%;">
+        <div class="curtain-button" id="curtainButton"></div>
+    </header>
+    <div class="video-container">
+        <video autoplay muted loop id="myVideo">
+            <source src="./img/hey.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
 
-    <button id="mostrarBtn">Mostrar Imagen</button>
+        <!-- Contenido de la página va aquí -->
+        <div class="content">
+            <div class="logo"><img src="./img/image27.png" alt="" ></div>
+        </div>
+        <div class="stop-button" id="stopButton"></div>
+        
+        <div class="curtain" id="curtain"></div>
 
-    <div id="imagenContainer">
-        <img id="miImagen" src="https://static.vecteezy.com/system/resources/thumbnails/009/379/725/small/glossy-buttons-clipart-design-illustration-free-png.png" alt="Imagen">
     </div>
 
-    <script src="algo.js"></script>
+    <script src="./javasiesnecesario/algo2.js"></script>
+    </div>
 </body>
 </html>

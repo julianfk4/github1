@@ -7,14 +7,47 @@ public class Main {
 
         System.out.println("Agenda");
         Agenda agenda1 = new Agenda(100);
+        while (true) {
+            System.out.println("1. Agregar contacto");
+            System.out.println("2. Eliminar contacto");
+            System.out.println("3. Mostrar contactos");
+            System.out.println("4. Salir");
+            System.out.print("Seleccione una opción: ");
 
-        System.out.println("introduce contacto");
+            int opcion = sc.nextInt();
+            sc.nextLine(); // Consumir la nueva línea después de leer el entero
 
-        Contacto contacto1 = new Contacto(nombre2=sc.nextLine(), sc.nextInt());
+            switch (opcion) {
+                case 1:
+                    System.out.print("Introduce el nombre del contacto: ");
+                    String nombre = sc.nextLine();
 
-        if (contacto1.esIgual(nombre2)){
-            System.out.println("hola");
-            
+                    System.out.print("Introduce el número de teléfono: ");
+                    int num_telef = sc.nextInt();
+                    sc.nextLine(); // Consumir la nueva línea después de leer el entero
+
+                    Contacto nuevoContacto = new Contacto(nombre, num_telef);
+                    agenda1.agregarContacto(nuevoContacto);
+                    System.out.println("Contacto agregado:");
+                    nuevoContacto.imprimir();
+                    break;
+                case 2:
+                    System.out.print("Introduce el ID del contacto a eliminar: ");
+                    int idEliminar = sc.nextInt();
+                    sc.nextLine(); // Consumir la nueva línea después de leer el entero
+
+                    agenda1.eliminarContacto(idEliminar);
+                    break;
+                case 3:
+                    System.out.println("Lista de contactos:");
+                    agenda1.mostrarContactos();
+                    break;
+                case 4:
+                    System.out.println("Saliendo del programa.");
+                    return;
+                default:
+                    System.out.println("Opción no válida. Por favor, seleccione de nuevo.");
+            }
         }
     }
 }

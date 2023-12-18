@@ -33,7 +33,7 @@ public class Main_1 {
                 animal1.cambiodato(tieneChip);
                 break;
             case "D":
-                animal1.cambiodato();
+                animal1.verdato();
                 break;
             case "F":
                 eleccion= "F";

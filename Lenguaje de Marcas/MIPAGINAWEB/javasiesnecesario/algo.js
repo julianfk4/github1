@@ -1,13 +1,12 @@
-document.addEventListener('DOMContentLoaded', function () {
-    var btnMostrar = document.getElementById('mostrarBtn');
-    var imagenContainer = document.getElementById('imagenContainer');
+document.addEventListener("DOMContentLoaded", function () {
+    var video = document.getElementById("myVideo");
+    var stopButton = document.getElementById("stopButton");
 
-    btnMostrar.addEventListener('click', function () {
-        // Alternar la visibilidad de la imagen al hacer clic en el botón
-        if (imagenContainer.style.display === 'none') {
-            imagenContainer.style.display = 'block';
-        } else {
-            imagenContainer.style.display = 'none';
-        }
+    stopButton.addEventListener("mouseenter", function () {
+        video.pause();
+    });
+
+    stopButton.addEventListener("mouseleave", function () {
+        video.play();
     });
 });

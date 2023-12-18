@@ -1,0 +1,32 @@
+body{
+    background-color: #282525;
+    margin: 0px;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #282525;
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 2%;
+}
+nav div{
+background-color: #2235;
+margin: 0px 10px;
+border-radius: 30px;
+padding: 1%;
+}
+nav div a{
+margin: 0px 30px;
+}
+section{
+    background-color: #282525;
+}
+section.section1{
+    display: flex;
+    justify-content: center;
+}

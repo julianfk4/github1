@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Previsualizador de HTML</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        iframe {
+            width: 35%;
+            height: 100vh;
+            border: none;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <iframe id="iframePreview" src="ruta_del_archivo_1.html" frameborder="0"></iframe>
+
+    <!-- Botones para cambiar el HTML en el iframe -->
+    <div>
+        <button onclick="cambiarHTML('pruebaflexeo.html')">HTML 1</button>
+        <button onclick="cambiarHTML('skills.html')">HTML 2</button>
+        <!-- Agrega más botones según sea necesario -->
+    </div>
+
+    <script>
+        function cambiarHTML(ruta) {
+            document.getElementById('iframePreview').src = ruta;
+        }
+    </script>
+</body>
+</html>
